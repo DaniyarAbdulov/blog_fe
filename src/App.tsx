@@ -5,14 +5,13 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <div className=" min-h-screen bg-slate-100">
+    <div className=" min-h-screen ">
       <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-      </Route>
-    </Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
     </div>
-    
   );
 }
 
