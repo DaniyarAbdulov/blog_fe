@@ -21,7 +21,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
   );
   const onClickRemove = () => {};
   return (
-    <div className="flex flex-col  mt-8 border rounded-2xl pb-3 shadow-lg shadow-black-300 mr-2 ml-2 bg-slate-50 w-full">
+    <div className="flex flex-col  mt-10 border rounded-2xl pb-3 shadow-lg shadow-black-300 mr-2 ml-2 bg-slate-50 w-full">
       {post.isEditable && (
         <div className="flex justify-end mr-2">
           <Link
@@ -74,7 +74,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
           <img
             src={post.user.avatarUrl}
             alt={post.user.fullName}
-            className="w-8 h-8 rounded-full mr-2"
+            className=" rounded-full mr-2 w-10 h-10 object-cover"
           />
           <span>{post.user.fullName}</span>
           <span className="ml-2 text-gray-500">{post.createdAt}</span>

@@ -2,7 +2,7 @@ import React from "react";
 
 const SkeletonPost = () => {
   return (
-    <div className="flex animate-pulse flex-col mt-8 border rounded-2xl pb-3 shadow-lg shadow-black-300 mr-2 ml-2 bg-gradient-to-br from-slate-50 via-slate-100 to-slate-50">
+    <div className="flex w-full animate-pulse flex-col mt-8 border rounded-2xl pb-3 shadow-lg shadow-black-300 mr-2 ml-2 bg-gradient-to-br from-slate-50 via-slate-100 to-slate-50">
       <div className="flex justify-end mr-2 space-x-2">
         <div className="bg-gradient-to-br from-primary to-blue-500 p-2 rounded-full">
           <svg

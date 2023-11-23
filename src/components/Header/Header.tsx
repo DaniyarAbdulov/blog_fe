@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
   );
 
   return (
-    <nav className="w-full min-h-full bg-gradient-to-br from-slate-100 to-slate-400 rounded-b-md  shadow-slate-600 shadow-sm">
+    <nav className="w-full  sticky top-0 bg-gradient-to-br from-slate-100 to-slate-400 rounded-b-md  shadow-slate-600 shadow-sm">
       <div className="flex flex-row justify-between ml-10 mr-10">
         <div>
           <NavLink className="text-base font-sans md:text-lg " to="/">
