@@ -3,7 +3,7 @@ import Post from "./Post/Post";
 
 const Home = () => {
   return (
-    <div className=" flex flex-col gap-7">
+    <div className=" flex flex-col justify-center items-center mr-2 ml-2 gap-7">
       {[...Array(5)].map((_, index) => (
         <Post 
           key={index}

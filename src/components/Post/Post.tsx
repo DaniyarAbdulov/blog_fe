@@ -13,22 +13,20 @@ interface ButtonProps {
 }
 
 const Post: React.FC<PostProps> = ({ post }) => {
-  if ((post.isLoading=true)) {
-    return (
-      <SkeletonPost/>
-    );
+  if ((post.isLoading = false)) {
+    return <SkeletonPost />;
   }
   const Button: React.FC<ButtonProps> = ({ onClick, children }) => (
     <button onClick={onClick}>{children}</button>
   );
   const onClickRemove = () => {};
   return (
-    <div className="flex flex-col mt-8 border rounded-2xl pb-3 shadow-lg shadow-black-300 mr-2 ml-2 bg-slate-50">
+    <div className="flex flex-col  mt-8 border rounded-2xl pb-3 shadow-lg shadow-black-300 mr-2 ml-2 bg-slate-50 w-full">
       {post.isEditable && (
         <div className="flex justify-end mr-2">
           <Link
             to={`/posts/${post._id}/edit`}
-            className="bg-primary p-2 rounded "
+            className="bg-primary p-2 rounded hover:scale-110"
             title="Edit"
           >
             <svg
@@ -53,7 +51,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              className="w-6 h-6 stroke-blue-500 stroke-2"
+              className="w-6 h-6 stroke-blue-500 stroke-2 hover:scale-110"
             >
               <path
                 stroke-linecap="round"
@@ -68,10 +66,10 @@ const Post: React.FC<PostProps> = ({ post }) => {
         <img
           src={post.imageUrl}
           alt={post.title}
-          className="mb-2 rounded object-contain"
+          className="mb-2 rounded w-full object-contain"
         />
       )}
-      <div className="flex flex-col ml-2 mr-2">
+      <div className="flex flex-col ml-2 mr-2 text-sm md:text-base">
         <div className="flex items-center mb-2">
           <img
             src={post.user.avatarUrl}
@@ -81,7 +79,10 @@ const Post: React.FC<PostProps> = ({ post }) => {
           <span>{post.user.fullName}</span>
           <span className="ml-2 text-gray-500">{post.createdAt}</span>
         </div>
-        <Link to={`/posts/${post._id}`} className="text-xl font-bold mb-2">
+        <Link
+          to={`/posts/${post._id}`}
+          className="font-bold mb-2 text-sm md:text-xl"
+        >
           {post.title}
         </Link>
         <ul className="flex space-x-2 mb-2">

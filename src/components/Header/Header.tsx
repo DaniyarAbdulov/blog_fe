@@ -15,14 +15,14 @@ const isAuth: boolean = false;
 const Header: React.FC<HeaderProps> = ({ title }) => {
   const renderButton = ({ to, text }: ButtonProps) => (
     <NavLink to={to} key={to}>
-      <button className="inline-block  shadow-2xl shadow-slate-400 rounded-r-lg rounded-s-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-2 p-1">
+      <button className="inline-block  shadow-2xl shadow-slate-400 rounded-r-lg rounded-s-lg hover:bg-gray-700  px-2 p-1 mb-1 mt-1 text-neutral-100 cursor-pointer">
         <p className=" text-xs font-sans md:text-base">{text}</p>
       </button>
     </NavLink>
   );
 
   return (
-    <header className="w-full bg-slate-200 max-h-screen h-full rounded-b shadow-slate-600 shadow-2xl">
+    <nav className="w-full min-h-full bg-gradient-to-br from-slate-100 to-slate-400 rounded-b-md  shadow-slate-600 shadow-sm">
       <div className="flex flex-row justify-between ml-10 mr-10">
         <div>
           <NavLink className="text-base font-sans md:text-lg " to="/">
@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
           )}
         </div>
       </div>
-    </header>
+    </nav>
   );
 };
 
