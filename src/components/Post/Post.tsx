@@ -20,8 +20,10 @@ const Post: React.FC<PostProps> = ({ post }) => {
     <button onClick={onClick}>{children}</button>
   );
   const onClickRemove = () => {};
+  const formattedDate = (new Date(post.createdAt)).toISOString().split('T')[0];
+
   return (
-    <div className="flex flex-col  mt-10 border rounded-2xl pb-3 shadow-lg shadow-black-300 mr-2 ml-2 bg-slate-50 w-full">
+    <div className="flex flex-col mt-10 border rounded-2xl pb-3 shadow-lg shadow-black-300 mr-2 ml-2 bg-slate-50 w-full">
       {post.isEditable && (
         <div className="flex justify-end mr-2">
           <Link
@@ -77,7 +79,8 @@ const Post: React.FC<PostProps> = ({ post }) => {
             className=" rounded-full mr-2 w-10 h-10 object-cover"
           />
           <span>{post.user.fullName}</span>
-          <span className="ml-2 text-gray-500">{post.createdAt}</span>
+          <span className="ml-2 text-gray-500">{formattedDate}</span>
+
         </div>
         <Link
           to={`/posts/${post._id}`}

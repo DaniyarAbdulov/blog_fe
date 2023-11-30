@@ -17,7 +17,4 @@ export interface IPost {
   isEditable?: boolean;
 };
 
-export type Tags = {
-  items: string[];
-  isLoading?: boolean;
-};
+
